@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox - Imagination Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Check if user is authenticated
+        function checkAuth() {
+            const isAuthenticated = sessionStorage.getItem('gameSession') === 'authenticated';
+            if (!isAuthenticated) {
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Check auth before loading app
+        checkAuth();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
